@@ -10,6 +10,8 @@ class MyLinkedList:
             self.next.append(data)
 
     def remove(self, d):
+        if d == None:
+            return self
         if self.data == d:
             return self.next
         elif self.next.data == d:

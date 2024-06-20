@@ -33,6 +33,10 @@ class TestLargerExample(unittest.TestCase):
         ll = self.my_linked_list.remove(4)
         self.assertEqual(ll.to_string(), "1 2 3")
 
+    def test_remove_null(self):
+        ll = self.my_linked_list.remove(None)
+        self.assertEqual(ll.to_string(), "1 2 3 4")
+
 
 if __name__ == "__main__":
     unittest.main()
